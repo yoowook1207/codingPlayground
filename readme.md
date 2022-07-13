@@ -29,8 +29,6 @@
 
   N/A
 
-## Deployed
-  https://sungwook-semi-wedding-invitati.herokuapp.com/
 
 ## Questions
 
