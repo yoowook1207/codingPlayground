@@ -84,13 +84,16 @@ function multiply(a, b) {
     return answerIn7DigitBlocksArray.join('')
 }
 
-document.getElementById('calculate').addEventListener('click', function () {
-    var regex = /\.|0000000.*/g;
+// document.getElementById('calculate').addEventListener('click', function () {
+//     var regex = /\.|0000000.*/g;
 
-    if (document.getElementById("myNumberA").value.toString().match(regex) || document.getElementById("myNumberB").value.toString().match(regex)) {
-        document.getElementById("demo").innerHTML = "This Calculator does not work with decimals or numbers with more than 7 consecutive '0's', please enter a different number"
-    } else {
-        document.getElementById("demo").innerHTML = multiply(document.getElementById("myNumberA").value.toString(), document.getElementById("myNumberB").value.toString())
-    }
-})
+//     if (document.getElementById("myNumberA").value.toString().match(regex) || document.getElementById("myNumberB").value.toString().match(regex)) {
+//         document.getElementById("demo").innerHTML = "This Calculator does not work with decimals or numbers with more than 7 consecutive '0's', please enter a different number"
+//     } else {
+//         document.getElementById("demo").innerHTML = multiply(document.getElementById("myNumberA").value.toString(), document.getElementById("myNumberB").value.toString())
+//     }
+// })
+
+
+console.log(multiply(12345678955, 98765432175))
 

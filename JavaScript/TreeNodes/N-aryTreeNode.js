@@ -138,5 +138,6 @@ class Tree {
     tree.traverseDFS(node => { console.log(node.data); }, 'preOrder'); 
 
     console.log(tree.isEvenSumOfSubtrees())
+    
 
 })()
