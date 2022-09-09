@@ -1,25 +1,24 @@
-var letterToCharCode = function(s) {
-    let string = [];
-
-    for (let i=0; i<s.length; i++) {
-    
-        let code = s.charCodeAt(i)
-        console.log(s[i])
-        console.log(code)
-
-
-    if (((code >= 48) && (code <= 57))  // numbers
-        || ((code >= 65) && (code <= 90))  // uppercase
-        || ((code >= 97) && (code <= 122)))
-         {
-            string.push(s[i]);
-        }
+function minStart(arr) {
+    // Write your code here
+    let startingNum = 1
+    if (arr[0]<0) {
+        startingNum += Math.abs(arr[0])
     }
+    let tempNumber = startingNum
+    let tempArr = []
 
-    console.log(string)
-};
+    for (let i=0; i<arr.length; i++) {
+        tempNumber += arr[i]
+        tempArr.push(tempNumber)
+    }
+    
+    let MinNum = Math.min(...tempArr)
+    console.log(startingNum)
+    console.log(MinNum)
+    let needAdd = 1-MinNum
+    console.log(needAdd)
+    return tempNumber+needAdd
 
-let a = 'Hi, My Name Is Sung!!!'
+}
 
-letterToCharCode(a)
-
+minStart([-5,4,-2,3,1,-1,-6,-1,0,5])
