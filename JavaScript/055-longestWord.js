@@ -8,4 +8,4 @@ const longestWord = (arr) => {
     return longest
 }
 
-console.log(longestWord(['help', 'meddddd']))
+console.log(longestWord(['help', 'medddddd']))

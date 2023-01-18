@@ -11,40 +11,21 @@
  * @return {boolean}
  */
 var isSymmetric = function(root) {
-    const leftStack = [];
-    const leftOutPut = [];
-    const rightStack = [];
-    const rightOutPut = [];
-
-    let left = root.left;
-    let right = root.right;
-
-    while (left !== null || leftStack.length !==0 ) {
-        if (left !== null) {
-            leftStack.push(left);
-            left = left.left;
-          } else {
-            left = leftStack.pop();
-            leftOutPut.push(left.val);
-            left = left.right;
-          }
-    }
-
-    while (right !== null || rightStack.length !==0 ) {
-        if (right !== null) {
-            rightStack.push(right);
-            right = right.right;
-          } else {
-            right = rightStack.pop();
-            rightOutPut.push(right.val);
-            right = right.left;
-          }
-    }
-
-    console.log(leftOutPut)
-    console.log(rightOutPut)
-
-    if(leftOutPut == rightOutPut) {
-        return true
-    } else return false
+    // Special case...
+    if (!root)
+        return true;
+    // Return the function recursively...
+    return isSame(root.left, root.right);
+};
+// A tree is called symmetric if the left subtree must be a mirror reflection of the right subtree...
+var isSame = function (leftroot, rightroot) {
+    // If both root nodes are null pointers, return true...
+    // If exactly one of them is a null node, return false...
+    // If root nodes haven't same value, return false...
+    if ((!leftroot && rightroot) || (leftroot && !rightroot) || (leftroot && rightroot && leftroot.val !== rightroot.val))
+        return false;
+    // Return true if the values of root nodes are same and left as well as right subtrees are symmetric...
+    if (leftroot && rightroot)
+        return isSame(leftroot.left, rightroot.right) && isSame(leftroot.right, rightroot.left);
+    return true;
 };
