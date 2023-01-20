@@ -46,7 +46,7 @@ public class Student{
     s.setId(1);
     s.setCollegeName("George Washington University");
     s.setAddress("13312 Rising Sun Ln, Germantown, MD 20874");
-    //getting value 
+    //printing value 
     System.out.println(s.getName() +" "+ s.getId() +" "+ s.getCollegeName() +" "+ s.getAddress());
     }  
     }
