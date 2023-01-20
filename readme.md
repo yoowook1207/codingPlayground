@@ -10,15 +10,18 @@
 
 
 ## Table of Contents
-  * [Contents](#contents)
-  * [License](#license)
-  * [Contributing](#contributing)
-  * [Questions](#questions)
+- [Coding Playground by Sung Wook](#coding-playground-by-sung-wook)
+  - [Description](#description)
+  - [Table of Contents](#table-of-contents)
+  - [Contents](#contents)
+  - [License](#license)
+  - [Contributing](#contributing)
+  - [Questions](#questions)
   
 
 ## Contents
-    Java: learning java language section
-    JavaScript: Study plans on leetcode.com in JavaScript
+    Java: learning java language
+    JavaScript: Solving algorithm problems on leetcode.com in JavaScript
   
 ## License
   GNU GPL v3.0
