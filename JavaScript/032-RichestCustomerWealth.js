@@ -1,5 +1,6 @@
 var maximumWealth = function(accounts) {
     let compare = []
+    
     for (let i in accounts) {
         compare.push(accounts[i].reduce((a,b)=>a+b))
     }
